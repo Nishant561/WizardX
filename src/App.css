@@ -1,0 +1,38 @@
+@font-face {
+  font-family: nishant;
+  src: url('./assets/3856NeueMachina.woff2');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'nishant';
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden; /* Hide the overflowing content */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.mar {
+  display: flex;
+  animation-name: slide;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; /* Ensure the animation repeats infinitely */
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
